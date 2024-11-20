@@ -18,11 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_transaction')->nullable();
             $table->foreign('id_transaction')->references('id_transaction')->on('transactions');
             $table->timestamp('tanggal_pengajuan')->default(now());
-            $table->string('validasi')->nullable();
-            $table->foreign('validasi')->references('nik')->on('karyawans');
-            $table->string('reject_by')->nullable();
-            $table->foreign('reject_by')->references('nik')->on('karyawans');
-            $table->string('reject')->nullable();
             $table->timestamps();
         });
     }

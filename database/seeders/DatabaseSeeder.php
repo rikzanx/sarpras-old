@@ -9,6 +9,7 @@ use App\Models\Transaction;
 use App\Models\TransactionItem;
 use App\Models\Stock;
 use App\Models\Notifikasi;
+use App\Models\Satuan;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -48,18 +49,18 @@ class DatabaseSeeder extends Seeder
 
         // Satuan Unit
         $satuanUnit = Satuan::create([
-            'nama' => $satuanUnit->id_satuan,
-            'deskripsi' => $satuanUnit->id_satuan
+            'nama' => 'Unit',
+            'deskripsi' => 'Unit'
         ]);
 
         $satuanMeter = Satuan::create([
-            'nama' => $satuanMeter->id_satuan,
-            'deskripsi' => $satuanMeter->id_satuan
+            'nama' => 'Meter',
+            'deskripsi' => 'Meter'
         ]);
 
         $satuanPack = Satuan::create([
-            'nama' => $satuanPack->id_satuan,
-            'deskripsi' => $satuanPack->id_satuan
+            'nama' => 'Pack',
+            'deskripsi' => 'Pack'
         ]);
 
         // Seed GroupItems (ISMS dan ATK)
